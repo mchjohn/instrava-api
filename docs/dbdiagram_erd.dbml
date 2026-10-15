@@ -1,0 +1,40 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+enum sport_type {
+  run [note: 'Todos os tipos de corrida']
+  ride [note: 'Todos os tipos de pedal']
+}
+
+Table users {
+  id integer [primary key]
+  name varchar
+  email varchar
+  password varchar
+  created_at timestamp
+}
+
+Table avtivities {
+  id integer [primary key]
+  user_id interger
+  external_activity_id bigint
+  name varchar
+  sport_type sport_type
+  description text
+  start_date timestamp
+  distance float
+  moving_time integer
+  elapsed_time integer
+  average_speed float
+  max_speed float
+  elevation_gain float
+  elevation_loss float
+  average_heartrate float
+  max_heartrate float
+  average_watts float
+  calories float
+  relative_effort float
+  gear varchar
+}
+
+Ref: users.id ?< avtivities.user_id
