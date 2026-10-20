@@ -43,7 +43,7 @@ A aplicação é uma plataforma Web desacoplada desenvolvida para gestão, visua
 
 ### Módulo 1: Autenticação e Gestão de Usuários
 
-- **[Auth-01] Cadastro de Usuário:** Registro com e-mail, nome e senha criptografada (Argon2).
+- **[Auth-01] Cadastro de Usuário:** Registro com e-mail, nome e senha criptografada (Argon2). SDD: [docs/sdd/AUTH-01.md](sdd/AUTH-01.md).
 - **[Auth-02] Login / Emissão de Token:** Autenticação via `OAuth2PasswordBearer` gerando tokens JWT (*Bearer Tokens*).
 - **[Auth-03] Proteção de Rotas:** Middleware de verificação de autenticação para garantia de acesso isolado aos dados de cada usuário.
 
